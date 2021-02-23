@@ -1,6 +1,6 @@
 {
     "name": "kraenkvisuell/project-starter",
-    "description": "Kickstart Laravel Web Project",
+    "description": "Kickstart Laravel Web Project with Nova and Nova CMS",
     "keywords": [
         "laravel"
     ],
