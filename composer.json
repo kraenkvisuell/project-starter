@@ -1,0 +1,43 @@
+{
+    "name": "kraenkvisuell/project-starter",
+    "description": "Kickstart Laravel Web Project",
+    "keywords": [
+        "laravel"
+    ],
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4.0|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kraenkvisuell\\ProjectStarter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kraenkvisuell\\ProjectStarter\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kraenkvisuell\\ProjectStarter\\ProjectStarterServiceProvider"
+            ]
+        }
+    }
+}
