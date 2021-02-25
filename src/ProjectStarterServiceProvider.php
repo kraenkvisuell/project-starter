@@ -4,9 +4,12 @@ namespace Kraenkvisuell\ProjectStarter;
 
 use Illuminate\Support\ServiceProvider;
 use Kraenkvisuell\ProjectStarter\Console\Start;
+use Kraenkvisuell\ProjectStarter\Console\CopyRoutes;
 use Kraenkvisuell\ProjectStarter\Console\AddRayToComposer;
 use Kraenkvisuell\ProjectStarter\Console\AddNovaToComposer;
+use Kraenkvisuell\ProjectStarter\Console\PublishThirdParties;
 use Kraenkvisuell\ProjectStarter\Console\AddNovaCmsToComposer;
+use Kraenkvisuell\ProjectStarter\Console\CopyNovaServiceProvicer;
 
 class ProjectStarterServiceProvider extends ServiceProvider
 {
@@ -18,6 +21,9 @@ class ProjectStarterServiceProvider extends ServiceProvider
                 AddNovaToComposer::class,
                 AddRayToComposer::class,
                 AddNovaCmsToComposer::class,
+                PublishThirdParties::class,
+                CopyNovaServiceProvicer::class,
+                CopyRoutes::class,
             ]);
         }
     }
