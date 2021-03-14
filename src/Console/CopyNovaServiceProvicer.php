@@ -15,7 +15,7 @@ class CopyNovaServiceProvicer extends Command
 
         
         File::copy(
-            base_path('vendor/kraenkvisuell/project-starter/stubs/NovaServiceProvider.php'),
+            base_path('vendor/kraenkvisuell/project-starter/stubs/app/Providers/NovaServiceProvider.php'),
             base_path('app/Providers/NovaServiceProvider.php'),
         );
     }

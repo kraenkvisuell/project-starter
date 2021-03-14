@@ -10,27 +10,21 @@ class Start extends Command
 
     public function handle()
     {
-        $this->call('ps:add-nova-to-composer');
-
-        $this->call('ps:add-nova-cms-to-composer');
-
-        $this->call('ps:add-ray-to-composer');
-
-        $this->comment('run composer update...');
-        shell_exec('composer update');
-
-        $this->call('ps:publish-third-parties');
-
         $this->comment('run migrations...');
+
         $this->call('migrate');
 
         $this->call('nova:install');
 
-        $this->call('ps:copy-nova-service-provider');
+        $this->call('nova:publish');
 
-        $this->call('ps:copy-routes');
+        $this->call('config:clear');
+
+        $this->call('migrate');
 
         $this->call('cms:init');
+
+        $this->call('cms:force-mix');
 
         $this->call('cms:use-theme', [
             'theme' => 'default'
