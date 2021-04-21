@@ -10,15 +10,21 @@ class Start extends Command
 
     public function handle()
     {
-        $this->comment('run migrations...');
-
-        $this->call('migrate');
-
         $this->call('nova:install');
 
         $this->call('nova:publish');
 
+        $this->call('ps:copy-custom-nova-assets');
+
+        $this->call('ps:copy-nova-service-provider');
+
+        $this->call('ps:copy-nova-resource');
+
         $this->call('config:clear');
+
+        $this->call('ps:publish-third-parties');
+
+        $this->comment('run migrations...');
 
         $this->call('migrate');
 
@@ -31,7 +37,7 @@ class Start extends Command
         ]);
 
         $this->comment('creating storage link...');
-        if(!is_link(base_path('public/storage'))) {
+        if (!is_link(base_path('public/storage'))) {
             $this->call('storage:link');
         } else {
             $this->line('storage link already created.');

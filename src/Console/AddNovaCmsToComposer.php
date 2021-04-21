@@ -13,7 +13,7 @@ class AddNovaCmsToComposer extends Command
     {
         $this->comment('Adding Nova CMS to composer if not yet added...');
 
-        $writerResponse = ComposerWriter::addRequire('kraenkvisuell/nova-cms', '^1.2.5');
+        $writerResponse = ComposerWriter::addRequire('kraenkvisuell/nova-cms', '^1.6.0');
 
         $this->{$writerResponse['existed'] ? 'line' : 'info'}($writerResponse['message']);
     }

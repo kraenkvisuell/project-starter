@@ -12,16 +12,16 @@ class PublishThirdParties extends Command
     {
         $this->comment('Publishing third party packages...');
 
-        if(!config('nova-media-library')) {
+        if (!config('nova-media-library')) {
             $this->call('vendor:publish', [
-                '--provider' => 'ClassicO\NovaMediaLibrary\ToolServiceProvider'
+                '--provider' => 'Kraenkvisuell\NovaCmsMedia\ToolServiceProvider'
             ]);
             $this->info('Published nova-media-library.');
         } else {
             $this->line('nova-media-library already published.');
         }
 
-        if(!config('nova-translatable')) {
+        if (!config('nova-translatable')) {
             $this->call('vendor:publish', [
                 '--tag' => 'nova-translatable-config'
             ]);
@@ -29,6 +29,5 @@ class PublishThirdParties extends Command
         } else {
             $this->line('nova-translatable already published.');
         }
-        
     }
 }

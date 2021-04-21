@@ -13,7 +13,7 @@ class AddRayToComposer extends Command
     {
         $this->comment('Adding Ray to composer if not yet added...');
 
-        $writerResponse = ComposerWriter::addRequire('spatie/laravel-ray', '^1.3');
+        $writerResponse = ComposerWriter::addRequire('spatie/laravel-ray', '^1.17');
 
         $this->{$writerResponse['existed'] ? 'line' : 'info'}($writerResponse['message']);
     }

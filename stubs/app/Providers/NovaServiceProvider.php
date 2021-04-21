@@ -78,7 +78,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         return [
             new \OptimistDigital\MenuBuilder\MenuBuilder,
-            new \ClassicO\NovaMediaLibrary\NovaMediaLibrary,
+            new \Kraenkvisuell\NovaCmsMedia\NovaMediaLibrary,
             new \OptimistDigital\NovaSettings\NovaSettings,
         ];
     }
