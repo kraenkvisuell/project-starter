@@ -25,6 +25,8 @@ class Init extends Command
 
         $this->call('ps:copy-config-app');
 
+        $this->call('ps:copy-config-nova-translatable');
+
         $this->call('ps:copy-env');
 
         $this->call('ps:copy-routes');

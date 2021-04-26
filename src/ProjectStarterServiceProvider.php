@@ -17,6 +17,7 @@ use Kraenkvisuell\ProjectStarter\Console\PublishThirdParties;
 use Kraenkvisuell\ProjectStarter\Console\AddNovaCmsToComposer;
 use Kraenkvisuell\ProjectStarter\Console\CopyCustomNovaAssets;
 use Kraenkvisuell\ProjectStarter\Console\CopyNovaServiceProvicer;
+use Kraenkvisuell\ProjectStarter\Console\CopyConfigNovaTranslatable;
 
 class ProjectStarterServiceProvider extends ServiceProvider
 {
@@ -38,6 +39,7 @@ class ProjectStarterServiceProvider extends ServiceProvider
                 AddNovaCmsToComposer::class,
                 CopyCustomNovaAssets::class,
                 CopyNovaServiceProvicer::class,
+                CopyConfigNovaTranslatable::class,
             ]);
         }
     }
