@@ -16,8 +16,6 @@ class Start extends Command
 
         $this->call('ps:copy-custom-nova-assets');
 
-        $this->call('ps:copy-nova-service-provider');
-
         $this->call('ps:copy-nova-resource');
 
         $this->call('config:clear');
